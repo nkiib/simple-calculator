@@ -70,17 +70,24 @@ int main(int argc, char *argv[]){
         double s = sum(d_input,argc);
         std::cout << "ans: " << s << std::endl;
         return 0;
-    }else if(checkpoint == "average" || checkpoint == "-a"){
+    }
+    else if(checkpoint == "average" || checkpoint == "-a"){
         double ave = average(d_input,argc);
         std::cout << "ans: " << ave << std::endl;
         return 0;
-    }else if(checkpoint == "divisor" || checkpoint == "-d"){
+    }
+    else if(checkpoint == "divisor" || checkpoint == "-d"){
         output = divisor(input,argc);
-    }else if(checkpoint == "multiple" || checkpoint == "-m"){
+    }
+    else if(checkpoint == "multiple" || checkpoint == "-m"){
         output = multiple(input,argc);
-    }else if(checkpoint == "coprimality" || checkpoint == "-c"){
-        if(coprimality(input,argc)){std::cout << "互いに素です" << std::endl;}
-        else{std::cout << "互いに素ではありません。" << std::endl;}
+    }
+    else if(checkpoint == "coprimality" || checkpoint == "-c"){
+        if(coprimality(input,argc)){
+            std::cout << "互いに素です" << std::endl;
+        }else{
+            std::cout << "互いに素ではありません。" << std::endl;
+        }
         return 0;
     }else if(checkpoint == "--version" || checkpoint == "-v"){
         std::cout << "Tlooks Simple Calculator v0.1.0(Alpha 1)" << std::endl;
