@@ -1,4 +1,3 @@
-
 #include<iostream>
 #include<vector>
 #include<string>
@@ -46,10 +45,16 @@ void convert(int input[],double d_input[],int argc){
     }
 }
 
+void reduction(int input[]){
+    int d = divisor(input,4);
+    input[2] /= d;
+    input[3] /= d;
+}
+
 int main(int argc, char *argv[]){
 
     if(argc == 1){
-        std::cout << "\t-m:最小公倍数\n\t-d:最大公約数\n\t-c:互いに素かの確認\n\t-s:引数の合計\n\t-a:平均" << std::endl;
+        std::cout << "\t-m:最小公倍数\n\t-d:最大公約数\n\t-c:互いに素かの確認\n\t-s:引数の合計\n\t-a:平均\n\t-r:約分\n\t-v:バージョン" << std::endl;
         return 0;
     }
     std::string checkpoint = argv[1];
@@ -89,8 +94,14 @@ int main(int argc, char *argv[]){
             std::cout << "互いに素ではありません。" << std::endl;
         }
         return 0;
-    }else if(checkpoint == "--version" || checkpoint == "-v"){
-        std::cout << "Tlooks Simple Calculator v0.1.0(Alpha 1)" << std::endl;
+    }else if(checkpoint == "--reduction" || checkpoint == "-r"){
+        reduction(input);
+        std::cout << input[2] << "/" << input[3] << std::endl;
+        return 0;
+    }
+    
+    else if(checkpoint == "--version" || checkpoint == "-v"){
+        std::cout << "Tlooks Simple Calculator v0.1.0(Alpha 1)\nThis is test version." << std::endl;
         return 0;
     }
     
