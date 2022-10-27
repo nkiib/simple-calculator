@@ -54,7 +54,7 @@ void reduction(int input[]){
 int main(int argc, char *argv[]){
 
     if(argc == 1){
-        std::cout << "\t-m:æœ€å°å…¬å€æ•°\n\t-d:æœ€å¤§å…¬ç´„æ•°\n\t-c:äº’ã„ã«ç´ ã‹ã®ç¢ºèª\n\t-s:å¼•æ•°ã®åˆè¨ˆ\n\t-a:å¹³å‡\n\t-r:ç´„åˆ†\n\t-v:ãƒãƒ¼ã‚¸ãƒ§ãƒ³" << std::endl;
+        std::cout << "\t-m:Å¬Œö”{”\n\t-d:Å‘åŒö–ñ”\n\t-c:ŒÝ‚¢‚É‘f‚©‚ÌŠm”F\n\t-s:ˆø”‚Ì‡Œv\n\t-a:•½‹Ï\n\t-r:–ñ•ª\n\t-v:ƒo[ƒWƒ‡ƒ“" << std::endl;
         return 0;
     }
     std::string checkpoint = argv[1];
@@ -70,7 +70,7 @@ int main(int argc, char *argv[]){
 
     double output;
 
-    //ã‚³ãƒžãƒ³ãƒ‰è­˜åˆ¥
+    //ƒRƒ}ƒ“ƒhŽ¯•Ê
     if(checkpoint == "--sum" || checkpoint == "-s"){
         double s = sum(d_input,argc);
         std::cout << "ans: " << s << std::endl;
@@ -89,9 +89,9 @@ int main(int argc, char *argv[]){
     }
     else if(checkpoint == "coprimality" || checkpoint == "-c"){
         if(coprimality(input,argc)){
-            std::cout << "äº’ã„ã«ç´ ã§ã™" << std::endl;
+            std::cout << "ŒÝ‚¢‚É‘f‚Å‚·" << std::endl;
         }else{
-            std::cout << "äº’ã„ã«ç´ ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚" << std::endl;
+            std::cout << "ŒÝ‚¢‚É‘f‚Å‚Í‚ ‚è‚Ü‚¹‚ñB" << std::endl;
         }
         return 0;
     }else if(checkpoint == "--reduction" || checkpoint == "-r"){
