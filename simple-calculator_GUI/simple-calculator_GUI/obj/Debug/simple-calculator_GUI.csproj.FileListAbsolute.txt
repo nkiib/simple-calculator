@@ -1,0 +1,16 @@
+C:\MyFile\Visual Studio 2022\Minamin1234\simple-calculator_GUI\simple-calculator_GUI\bin\Debug\simple-calculator_GUI.exe.config
+C:\MyFile\Visual Studio 2022\Minamin1234\simple-calculator_GUI\simple-calculator_GUI\bin\Debug\simple-calculator_GUI.exe
+C:\MyFile\Visual Studio 2022\Minamin1234\simple-calculator_GUI\simple-calculator_GUI\bin\Debug\simple-calculator_GUI.pdb
+C:\MyFile\Visual Studio 2022\Minamin1234\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI.csproj.AssemblyReference.cache
+C:\MyFile\Visual Studio 2022\Minamin1234\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI.csproj.SuggestedBindingRedirects.cache
+C:\MyFile\Visual Studio 2022\Minamin1234\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\MainWindow.g.cs
+C:\MyFile\Visual Studio 2022\Minamin1234\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\App.g.cs
+C:\MyFile\Visual Studio 2022\Minamin1234\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI_MarkupCompile.cache
+C:\MyFile\Visual Studio 2022\Minamin1234\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI_MarkupCompile.lref
+C:\MyFile\Visual Studio 2022\Minamin1234\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\MainWindow.baml
+C:\MyFile\Visual Studio 2022\Minamin1234\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI.g.resources
+C:\MyFile\Visual Studio 2022\Minamin1234\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple_calculator_GUI.Properties.Resources.resources
+C:\MyFile\Visual Studio 2022\Minamin1234\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI.csproj.GenerateResource.cache
+C:\MyFile\Visual Studio 2022\Minamin1234\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI.csproj.CoreCompileInputs.cache
+C:\MyFile\Visual Studio 2022\Minamin1234\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI.exe
+C:\MyFile\Visual Studio 2022\Minamin1234\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI.pdb
