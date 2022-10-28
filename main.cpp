@@ -3,7 +3,6 @@
 #include<string>
 #include<numeric>
 
-
 int divisor(int input[],int argc){
     
     long long ret = input[2];
