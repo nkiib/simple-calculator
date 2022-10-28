@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using Microsoft.Win32;
+
 namespace simple_calculator_GUI
 {
     /// <summary>
@@ -20,9 +23,17 @@ namespace simple_calculator_GUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        public const string CALCPATH = "";
         public MainWindow()
         {
             InitializeComponent();
+            ProcessStartInfo p = new ProcessStartInfo();
+            p.FileName = $"{CALCPATH}";
+            p.Arguments = "";
+            p.UseShellExecute = true;
+
+            Process ps = Process.Start(p);
+            ps.WaitForExit();
         }
     }
 }
