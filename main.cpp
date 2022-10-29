@@ -53,7 +53,7 @@ void reduction(int input[]){
 int main(int argc, char *argv[]){
 
     if(argc == 1){
-        std::cout << "\t-m:最小公倍数\n\t-d:最大公約数\n\t-c:互いに素かの確認\n\t-s:引数の合計\n\t-a:平均\n\t-r:約分\n\t-v:バージョン" << std::endl;
+        std::cout << "\t-m:最小公倍数\n\t-d:最大公約数\n\t-c:互いに素かの確認\n\t-s:引数の合計\n\t-a:平均\n\t-r:約分\n\t-v:バージョン\n\t-p:累乗" << std::endl;
         return 0;
     }
     std::string checkpoint = argv[1];
@@ -97,6 +97,8 @@ int main(int argc, char *argv[]){
         reduction(input);
         std::cout << input[2] << "/" << input[3] << std::endl;
         return 0;
+    }else if(checkpoint == "--pow" || checkpoint == "-p"){
+        output = pow(input[2],input[3]);        
     }
     
     else if(checkpoint == "--version" || checkpoint == "-v"){
