@@ -5,9 +5,9 @@
 #include<numeric>
 #include<sstream>
 
-
+// 起動モード
 void launch_mode(){
-    std::cout << "Hello.I'm Simple-Calculator.v1.0 Alpha-1." << std::endl << "Copyright(c)2022 Team Tlooks" << std::endl;
+    std::cout << "Hello.I'm Simple-Calculator.v1.0 Alpha-1." << std::endl << "Copyright(c)2022 Team Tlooks." << std::endl;
     for(;;){
         std::vector<std::string> cmd;
         std::cout << ">>> ";
@@ -23,6 +23,13 @@ void launch_mode(){
                 std::cout << "Bye" << std::endl;
                 break;
             }
+    }
+}
+
+// double -> int
+void convert(int input[],double d_input[],int argc){
+    for(size_t i = 2;i < argc;i++){
+        input[i] = d_input[i];
     }
 }
 
@@ -43,46 +50,26 @@ int main(int argc, char *argv[]){
     }
     convert(input,d_input,argc);
 
-    double output;
-
+    std::cout << "ans:";
     //コマンド識別
-    if(checkpoint == "--sum" || checkpoint == "-s"){
-        double s = sum(d_input,argc);
-        std::cout << "ans: " << s << std::endl;
-        return 0;
-    }
-    else if(checkpoint == "average" || checkpoint == "-a"){
-        double ave = average(d_input,argc);
-        std::cout << "ans: " << ave << std::endl;
-        return 0;
-    }
-    else if(checkpoint == "divisor" || checkpoint == "-d"){
-        output = divisor(input,argc);
-    }
-    else if(checkpoint == "multiple" || checkpoint == "-m"){
-        output = multiple(input,argc);
-    }
-    else if(checkpoint == "coprimality" || checkpoint == "-c"){
-        if(coprimality(input,argc)){
-            std::cout << "互いに素です" << std::endl;
-        }else{
-            std::cout << "互いに素ではありません。" << std::endl;
-        }
-        return 0;
-    }else if(checkpoint == "--reduction" || checkpoint == "-r"){
-        reduction(input);
-        std::cout << input[2] << "/" << input[3] << std::endl;
-        return 0;
-    }else if(checkpoint == "--pow" || checkpoint == "-p"){
-        output = pow(input[2],input[3]);        
-    }
-    
-    else if(checkpoint == "--version" || checkpoint == "-v"){
+    if(checkpoint == "-s" || checkpoint == "--sum"){
+        sum(d_input,argc);   
+    }else if(checkpoint == "-a" || checkpoint == "average"){
+        average(d_input,argc);
+    }else if(checkpoint == "-d" || checkpoint == "divisor"){
+        divisor(input,argc);
+    }else if(checkpoint == "-m" || checkpoint == "multiple"){
+        multiple(input,argc);
+    }else if(checkpoint == "-c" || checkpoint == "coprimality"){
+        coprimality(input,argc);
+    }else if(checkpoint == "-r" || checkpoint == "--reduction"){
+        reduction(input);   
+    }else if(checkpoint == "-p" || checkpoint == "--pow"){
+        pow_in(input[2],input[3]);        
+    }else if(checkpoint == "-v" || checkpoint == "--version"){
         std::cout << "Tlooks Simple Calculator v0.1.0(Alpha 1)\nThis is test version." << std::endl;
-        return 0;
     }else if(checkpoint == "--help" || checkpoint == "-h" || checkpoint == "?"){
         std::cout << "\t-m:最小公倍数\n\t-d:最大公約数\n\t-c:互いに素かの確認\n\t-s:引数の合計\n\t-a:平均\n\t-r:約分\n\t-v:バージョン\n\t-p:累乗" << std::endl;
-        return 0;
     }
     
     
@@ -90,7 +77,6 @@ int main(int argc, char *argv[]){
         std::cout << "Command not found." << std::endl;
         return 0;
     }
-    std::cout << "ans :" << output << std::endl;
 
     return 0;
 }
