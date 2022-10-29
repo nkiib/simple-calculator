@@ -1,60 +1,28 @@
+#include "process.cpp"
 #include<iostream>
 #include<vector>
 #include<string>
 #include<numeric>
+#include<sstream>
 
-int divisor(int input[],int argc){
-    
-    long long ret = input[2];
-    for (size_t i = 3; i < argc; i++) {
-        ret = std::gcd(ret, input[i]);
+
+void launch_mode(){
+    std::cout << "Hello.I'm Simple-Calculator.v1.0 Alpha-1." << std::endl << "Copyright(c)2022 Team Tlooks" << std::endl;
+    for(;;){
+        std::vector<std::string> cmd;
+        std::cout << ">>>";
+            std::string in,s;
+            std::getline(std::cin,in,' ');
+            std::stringstream ss{s};
+            cmd.push_back(in);            
+        std::cout << "break" << std::endl;
     }
-    return ret;
-}
-
-int multiple(int input[],int argc){
-    return 0;
-}
-
-double sum(double d_input[],int argc){
-    double sum = 0.0;
-    for(size_t i = 2;i < argc;i++){
-        sum += d_input[i];
-    }
-    return sum;
-}
-
-double average(double d_input[],int argc){
-    int s = sum(d_input,argc);
-    double num = (double)argc - 2;
-    double ave = s / num;
-    return ave;
-}
-
-bool coprimality(int input[],int argc){
-    if(divisor(input,argc) == 1)
-        return 1;
-    else
-        return 0;
-}
-
-void convert(int input[],double d_input[],int argc){
-    for(size_t i = 2;i < argc;i++){
-        input[i] = d_input[i];
-    }
-}
-
-void reduction(int input[]){
-    int d = divisor(input,4);
-    input[2] /= d;
-    input[3] /= d;
 }
 
 int main(int argc, char *argv[]){
 
     if(argc == 1){
-        std::cout << "\t-m:最小公倍数\n\t-d:最大公約数\n\t-c:互いに素かの確認\n\t-s:引数の合計\n\t-a:平均\n\t-r:約分\n\t-v:バージョン\n\t-p:累乗" << std::endl;
-        return 0;
+        launch_mode();
     }
     std::string checkpoint = argv[1];
     const int ary = argc;
@@ -103,6 +71,9 @@ int main(int argc, char *argv[]){
     
     else if(checkpoint == "--version" || checkpoint == "-v"){
         std::cout << "Tlooks Simple Calculator v0.1.0(Alpha 1)\nThis is test version." << std::endl;
+        return 0;
+    }else if(checkpoint == "--help" || checkpoint == "-h" || checkpoint == "?"){
+        std::cout << "\t-m:最小公倍数\n\t-d:最大公約数\n\t-c:互いに素かの確認\n\t-s:引数の合計\n\t-a:平均\n\t-r:約分\n\t-v:バージョン\n\t-p:累乗" << std::endl;
         return 0;
     }
     
