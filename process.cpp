@@ -9,7 +9,7 @@ int divisor(int input[],int argc){
     for (size_t i = 3; i < argc; i++) {
         ret = std::gcd(ret, input[i]);
     }
-    std::cout << ret << std::endl;
+    std::cout << "ans:"  << ret << std::endl;
     return ret;
 }
 
@@ -22,7 +22,7 @@ double sum(double d_input[],int argc){
     for(size_t i = 2;i < argc;i++){
         sum += d_input[i];
     }
-    std::cout << sum << std::endl;
+    std::cout << "ans:"  << sum << std::endl;
     return sum;
 }
 
@@ -30,7 +30,7 @@ void average(double d_input[],int argc){
     int s = sum(d_input,argc);
     double num = (double)argc - 2;
     double ave = s / num;
-    std::cout << ave << std::endl;
+    std::cout << "ans:"  << ave << std::endl;
 }
 
 void coprimality(int input[],int argc){
@@ -45,8 +45,8 @@ void reduction(int input[]){
     int d = divisor(input,4);
     input[2] /= d;
     input[3] /= d;
-    std::cout << input[2] << "/" << input[3] << std::endl;
+    std::cout << "ans:"  << input[2] << "/" << input[3] << std::endl;
 }
 void pow_in(int a,int b){
-    std::cout << pow(a,b) << std::endl;
+    std::cout << "ans:"  << pow(a,b) << std::endl;
 }
