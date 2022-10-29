@@ -1,5 +1,4 @@
-#include "process.cpp"
-#include "launch_mode.cpp"
+#include "cmd.cpp"
 #include<iostream>
 #include<vector>
 #include<string>
@@ -10,6 +9,41 @@
 void convert(int input[],double d_input[],int argc){
     for(size_t i = 2;i < argc;i++){
         input[i] = d_input[i];
+    }
+}
+
+void convert_vect(double d_input[],std::vector<std::string> str,int len){
+    for(size_t i = 2;i < len;i++){
+        d_input[i] = stod(str[i]);
+    }
+}
+
+void launch_mode(){
+    std::cout << "Hello.I'm Simple-Calculator.v1.0 Alpha-1." << std::endl << "Copyright(c)2022 Team Tlooks." << std::endl;
+    for(;;){
+        std::vector<std::string> cmd;
+        cmd.push_back("null");
+        std::cout << ">>> ";
+            std::string in,s;
+            std::getline(std::cin,in);
+            std::stringstream cmdin{in};
+            while(std::getline(cmdin,s,' ')){
+                cmd.push_back(s);
+            }
+            if(cmd.empty()){continue;}
+
+            if(cmd[1] == "quit" || cmd[1] == "exit"){
+                std::cout << "Bye" << std::endl;
+                break;
+            }
+            int len_c = cmd.size();
+            std::string checkpoint = cmd[1];
+            const int len = len_c;
+            int input[len];
+            double d_input[len];
+            convert_vect(d_input,cmd,len);
+            convert(input,d_input,len);
+            run(input,d_input,len,checkpoint);
     }
 }
 
@@ -30,32 +64,7 @@ int main(int argc, char *argv[]){
     }
     convert(input,d_input,argc);
 
-    //コマンド識別
-    if(checkpoint == "-s" || checkpoint == "--sum"){
-        sum(d_input,argc);   
-    }else if(checkpoint == "-a" || checkpoint == "average"){
-        average(d_input,argc);
-    }else if(checkpoint == "-d" || checkpoint == "divisor"){
-        divisor(input,argc);
-    }else if(checkpoint == "-m" || checkpoint == "multiple"){
-        multiple(input,argc);
-    }else if(checkpoint == "-c" || checkpoint == "coprimality"){
-        coprimality(input,argc);
-    }else if(checkpoint == "-r" || checkpoint == "--reduction"){
-        reduction(input);   
-    }else if(checkpoint == "-p" || checkpoint == "--pow"){
-        pow_in(input[2],input[3]);        
-    }else if(checkpoint == "-v" || checkpoint == "--version"){
-        std::cout << "Tlooks Simple Calculator v0.1.0(Alpha 1)\nThis is test version." << std::endl;
-    }else if(checkpoint == "--help" || checkpoint == "-h" || checkpoint == "?"){
-        std::cout << "\t-m:最小公倍数\n\t-d:最大公約数\n\t-c:互いに素かの確認\n\t-s:引数の合計\n\t-a:平均\n\t-r:約分\n\t-v:バージョン\n\t-p:累乗" << std::endl;
-    }
-    
-    
-    else{
-        std::cout << "Command not found." << std::endl;
-        return 0;
-    }
+    run(input,d_input,argc,checkpoint);
 
     return 0;
 }
