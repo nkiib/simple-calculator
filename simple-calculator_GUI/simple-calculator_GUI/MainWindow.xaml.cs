@@ -40,17 +40,23 @@ namespace simple_calculator_GUI
     public partial class MainWindow : Window
     {
         public const string CALCPATH = ".\\calc.exe";
-        public const string CALC_M = "-m";
-        public const string CALC_D = "-d";
-        public const string CALC_C = "-c";
-        public const string CALC_S = "-s";
-        public const string CALC_A = "-a";
-        public const string CALC_R = "-r";
-        public const string CALC_V = "-v";
+        public const string RESULT_PRE = ">>";
+        public List<CALCTYPE> CALCTYPES = new List<CALCTYPE>()
+        {
+            new CALCTYPE("最小公倍数","-m"),
+            new CALCTYPE("最大公約数","-d"),
+            new CALCTYPE("素判定","-c"),
+            new CALCTYPE("合計","-s"),
+            new CALCTYPE("平均","-a"),
+            new CALCTYPE("約分","-r"),
+        };
+
+        public string outputs = "";
 
         public MainWindow()
         {
             InitializeComponent();
+            this.collectTypes(ref this.CALCTYPES);
             ProcessStartInfo p = new ProcessStartInfo();
             p.FileName = $"{CALCPATH}";
             p.Arguments = "";
@@ -68,6 +74,34 @@ namespace simple_calculator_GUI
 
         public void collectTypes(ref List<CALCTYPE> types)
         {
+            this.CB_Type.ItemsSource = this.CALCTYPES;
+        }
+
+        public string calculate(string args)
+        {
+            if (this.CB_Type.SelectedItem == null) return "";
+            ProcessStartInfo p = new ProcessStartInfo();
+            p.FileName = $"{CALCPATH}";
+            p.Arguments = $"{(this.CB_Type.SelectedItem as CALCTYPE).ARG} {args}";
+            p.UseShellExecute = false;
+            p.CreateNoWindow = true;
+            p.RedirectStandardOutput = true;
+
+            Process ps = Process.Start(p);
+            ps.WaitForExit();
+            var res = ps.StandardOutput.ReadToEnd();
+            var bres = Encoding.Default.GetBytes(res);
+            res = Encoding.UTF8.GetString(bres);
+            return res;
+        }
+
+        private void on_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                this.outputs += RESULT_PRE + calculate(this.TB_Input.Text);
+                this.Shell.Text = this.outputs;
+            }
         }
     }
 }

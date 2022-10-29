@@ -23,7 +23,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" VerticalAlignment="Bottom">
-            <TextBox x:Name="TB_Input" Text="text" FontSize="22"/>
+            <TextBox x:Name="TB_Input" Text="text" FontSize="22" KeyDown="on_KeyDown"/>
         </StackPanel>
     </Grid>
 </Window>
