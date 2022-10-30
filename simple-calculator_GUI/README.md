@@ -12,7 +12,7 @@
 
 ### ソリューションから起動
 1. `simple-calculator_GUI\simple-calculator_GUI.sln`をVisual Studioで開く
-2.デバッグを開始する
+2. デバッグを開始する
 
 ## 使い方
 1. `Type`から演算の種類を選択.
