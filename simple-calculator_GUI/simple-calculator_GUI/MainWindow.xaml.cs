@@ -34,13 +34,14 @@ namespace simple_calculator_GUI
             return this.TYPE;
         }
     }
+
     /// <summary>
     /// MainWindow.xaml の相互作用ロジック
     /// </summary>
     public partial class MainWindow : Window
     {
         public const string CALCPATH = ".\\calc.exe";
-        public const string RESULT_PRE = ">>";
+        public const string RESULT_PRE = ">> ";
         public List<CALCTYPE> CALCTYPES = new List<CALCTYPE>()
         {
             new CALCTYPE("最小公倍数","-m"),
@@ -51,7 +52,7 @@ namespace simple_calculator_GUI
             new CALCTYPE("約分","-r"),
         };
 
-        public string outputs = "";
+        public string output = "";
 
         public MainWindow()
         {
@@ -99,8 +100,11 @@ namespace simple_calculator_GUI
         {
             if(e.Key == Key.Enter)
             {
-                this.outputs += RESULT_PRE + calculate(this.TB_Input.Text);
-                this.Shell.Text = this.outputs;
+                var res = this.calculate(this.TB_Input.Text);
+                this.output = "";
+                this.output += RESULT_PRE;
+                this.output += res;
+                this.TB_Result.Text = this.output;
             }
         }
     }

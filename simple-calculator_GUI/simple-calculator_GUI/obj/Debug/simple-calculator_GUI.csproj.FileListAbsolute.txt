@@ -30,3 +30,18 @@ C:\Users\Minamin\Documents\Visual Studio 2022\Projects\simple-calculator\simple-
 C:\Users\Minamin\Documents\Visual Studio 2022\Projects\simple-calculator\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI.csproj.CoreCompileInputs.cache
 C:\Users\Minamin\Documents\Visual Studio 2022\Projects\simple-calculator\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI.exe
 C:\Users\Minamin\Documents\Visual Studio 2022\Projects\simple-calculator\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI.pdb
+C:\MyFile\Minamin1234\simple-calculator\simple-calculator_GUI\simple-calculator_GUI\bin\Debug\simple-calculator_GUI.exe.config
+C:\MyFile\Minamin1234\simple-calculator\simple-calculator_GUI\simple-calculator_GUI\bin\Debug\simple-calculator_GUI.exe
+C:\MyFile\Minamin1234\simple-calculator\simple-calculator_GUI\simple-calculator_GUI\bin\Debug\simple-calculator_GUI.pdb
+C:\MyFile\Minamin1234\simple-calculator\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI.csproj.AssemblyReference.cache
+C:\MyFile\Minamin1234\simple-calculator\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\MainWindow.g.cs
+C:\MyFile\Minamin1234\simple-calculator\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\App.g.cs
+C:\MyFile\Minamin1234\simple-calculator\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI_MarkupCompile.cache
+C:\MyFile\Minamin1234\simple-calculator\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI_MarkupCompile.lref
+C:\MyFile\Minamin1234\simple-calculator\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\MainWindow.baml
+C:\MyFile\Minamin1234\simple-calculator\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI.g.resources
+C:\MyFile\Minamin1234\simple-calculator\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple_calculator_GUI.Properties.Resources.resources
+C:\MyFile\Minamin1234\simple-calculator\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI.csproj.GenerateResource.cache
+C:\MyFile\Minamin1234\simple-calculator\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI.csproj.CoreCompileInputs.cache
+C:\MyFile\Minamin1234\simple-calculator\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI.exe
+C:\MyFile\Minamin1234\simple-calculator\simple-calculator_GUI\simple-calculator_GUI\obj\Debug\simple-calculator_GUI.pdb
