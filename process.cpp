@@ -2,6 +2,7 @@
 #include<vector>
 #include<string>
 #include<numeric>
+#include<cmath>
 
 int divisor(int input[],int argc,int flag = 0){
     
