@@ -17,3 +17,6 @@ Tlooks Simple Calculatorはとても簡単な計算機ですが、通常の計�
 
 * <code>-m , multiple</code>:引数の最小公倍数を計算します。
 
+# 既知の問題
+
+* 引数に数字以外を入力するとクラッシュする
