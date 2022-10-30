@@ -12,12 +12,14 @@ void convert(int input[],double d_input[],int argc){
     }
 }
 
-void convert_vect(double d_input[],std::vector<std::string> str,int len){
+void convert_vect(double d_input[],std::vector<std::string> str,int len,int& flag){
     for(size_t i = 2;i < len;i++){
         try{
             d_input[i] = stod(str[i]);
         }catch(std::invalid_argument &e){
             std::cout << "The syntax is different." << std::endl;
+            flag = 1;
+            return;
         }
     }
 }
@@ -43,9 +45,11 @@ void launch_mode(){
             int len_c = cmd.size();
             std::string checkpoint = cmd[1];
             const int len = len_c;
-            int input[len];
+            int input[len],flag = 0;
             double d_input[len];
-            convert_vect(d_input,cmd,len);
+            convert_vect(d_input,cmd,len,flag);
+            if(flag == 1){continue;}
+
             convert(input,d_input,len);
             run(input,d_input,len,checkpoint);
     }
