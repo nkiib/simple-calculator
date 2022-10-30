@@ -14,7 +14,11 @@ void convert(int input[],double d_input[],int argc){
 
 void convert_vect(double d_input[],std::vector<std::string> str,int len){
     for(size_t i = 2;i < len;i++){
-        d_input[i] = stod(str[i]);
+        try{
+            d_input[i] = stod(str[i]);
+        }catch(std::invalid_argument &e){
+            std::cout << "The syntax is different." << std::endl;
+        }
     }
 }
 
@@ -48,6 +52,7 @@ void launch_mode(){
 }
 
 int main(int argc, char *argv[]){
+
 
     if(argc == 1){
         launch_mode();
