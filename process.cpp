@@ -2,6 +2,7 @@
 #include<vector>
 #include<string>
 #include<numeric>
+#include<cmath>
 
 int divisor(int input[],int argc,int flag = 0){
     
@@ -54,5 +55,5 @@ void reduction(int input[]){
     std::cout << "ans:"  << input[2] << "/" << input[3] << std::endl;
 }
 void pow_in(int a,int b){
-    std::cout << "ans:"  << pow(a,b) << std::endl;
+    std::cout << "ans:"  << std::pow(a,b) << std::endl;
 }

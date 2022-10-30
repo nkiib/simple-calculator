@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" VerticalAlignment="Top" Height="145">
             <StackPanel x:Name="Selects" Orientation="Horizontal" Margin="1,1,1,1">
-                <TextBlock Text="Calculate Type: " VerticalAlignment="Center" FontSize="22"/>
+                <TextBlock Text="Type: " VerticalAlignment="Center" FontSize="22"/>
                 <ComboBox x:Name="CB_Type" Width="250" FontSize="22"/>
             </StackPanel>
             <StackPanel x:Name="Shows" Orientation="Horizontal" Margin="1,1,1,1">

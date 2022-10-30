@@ -40,7 +40,7 @@ namespace simple_calculator_GUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        public const string CALCPATH = ".\\calc.exe";
+        public const string CALCPATH = ".\\calc_shiftjis.exe";
         public const string RESULT_PRE = ">> ";
         public List<CALCTYPE> CALCTYPES = new List<CALCTYPE>()
         {
@@ -50,6 +50,7 @@ namespace simple_calculator_GUI
             new CALCTYPE("合計","-s"),
             new CALCTYPE("平均","-a"),
             new CALCTYPE("約分","-r"),
+            new CALCTYPE("累乗","-p")
         };
 
         public string output = "";
@@ -58,19 +59,6 @@ namespace simple_calculator_GUI
         {
             InitializeComponent();
             this.collectTypes(ref this.CALCTYPES);
-            ProcessStartInfo p = new ProcessStartInfo();
-            p.FileName = $"{CALCPATH}";
-            p.Arguments = "";
-            p.UseShellExecute = false;
-            p.RedirectStandardOutput = true;
-
-            Process ps = Process.Start(p);
-            
-            ps.WaitForExit();
-            string result = ps.StandardOutput.ReadToEnd();
-            var bres = Encoding.Default.GetBytes(result);
-            result = Encoding.UTF8.GetString(bres);
-            Console.WriteLine(result);
         }
 
         public void collectTypes(ref List<CALCTYPE> types)
@@ -91,8 +79,9 @@ namespace simple_calculator_GUI
             Process ps = Process.Start(p);
             ps.WaitForExit();
             var res = ps.StandardOutput.ReadToEnd();
-            var bres = Encoding.Default.GetBytes(res);
-            res = Encoding.UTF8.GetString(bres);
+            //var bres = Encoding.Default.GetBytes(res);
+            //res = Encoding.UTF8.GetString(bres);
+            Console.WriteLine(res);
             return res;
         }
 
@@ -100,6 +89,7 @@ namespace simple_calculator_GUI
         {
             if(e.Key == Key.Enter)
             {
+                if (this.TB_Input.Text == "") return;
                 var res = this.calculate(this.TB_Input.Text);
                 this.output = "";
                 this.output += RESULT_PRE;
