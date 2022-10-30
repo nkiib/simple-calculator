@@ -1,6 +1,6 @@
 # simple-calculator (GUI)
 ## 概要
-`simple-calculator`をGUIバージョンに落とし込んだもの。
+`simple-calculator`をGUI版として落とし込んだもの。
 
 ## 実装されている機能
 [simple-calculator](../README.md)の`README`に記載されている機能
