@@ -18,6 +18,11 @@ int divisor(int input[],int argc,int flag = 0){
 }
 
 int multiple(int input[],int argc){
+    long long ret = input[2];
+    for (size_t i = 3; i < argc; i++) {
+        ret = std::lcm(ret, input[i]);
+    }
+    std::cout << "ans:"  << ret << std::endl;
     return 0;
 }
 
@@ -54,6 +59,11 @@ void reduction(int input[]){
     input[3] /= d;
     std::cout << "ans:"  << input[2] << "/" << input[3] << std::endl;
 }
+
 void pow_in(int a,int b){
     std::cout << "ans:"  << pow(a,b) << std::endl;
+}
+
+void log_in(int a,int b){
+    std::cout << "Sorry.This feature is currently under consideration for implementation." << std::endl;
 }
