@@ -17,6 +17,11 @@ Tlooks Simple Calculatorはとても簡単な計算機ですが、通常の計�
 
 * <code>-m , multiple</code>:引数の最小公倍数を計算します。
 
+# 今後のアップデートで追加されるかもしれない機能
+
+* <code>-l , log</code>:対数を計算します。
+
 # 既知の問題
 
 * Windowsで日本語が文字化けする
+* multipleが動作しない
