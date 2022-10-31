@@ -24,4 +24,14 @@ Tlooks Simple Calculatorはとても簡単な計算機ですが、通常の計�
 
 # インストール方法
 
+## Mac/Linux/BSD
+
 ダウンロードしたソースコードでmakeコマンド実行
+
+## Windows
+
+ダウンロードしたアーカイブを解答して<code>main.cpp</code>があるディレクトリで
+
+<code>g++ -o tlooks-simple-calc main.cpp -std=c++17 --exec-charset=cp932 --input-charset=utf-8</code>
+
+を実行する。するとtlooks-simple-calc.exeが生成されるのでそれを使う。
