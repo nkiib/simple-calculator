@@ -12,9 +12,6 @@ Tlooks Simple Calculatorはとても簡単な計算機ですが、通常の計�
 * <code>-r , reduction , --reduction</code>:入力された分数（１つ目の引数を分子、２つ目の引数を分母と扱います）を約分します。
 * <code>-a , average , --average</code>:引数の平均を計算します。
 * <code>-p , pow , --pow</code>:引数を累乗します。
-
-## 実装されているが機能しない機能
-
 * <code>-m , multiple</code>:引数の最小公倍数を計算します。
 
 # 今後のアップデートで追加されるかもしれない機能
@@ -23,5 +20,8 @@ Tlooks Simple Calculatorはとても簡単な計算機ですが、通常の計�
 
 # 既知の問題
 
-* Windowsで日本語が文字化けする
-* multipleが動作しない
+現在はなし
+
+# インストール方法
+
+ダウンロードしたソースコードでmakeコマンド実行
