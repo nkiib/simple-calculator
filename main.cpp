@@ -42,7 +42,7 @@ void launch_mode(){
             break;
         }
         int len_c = cmd.size();
-        if(len_c == 2){continue;}
+        if(len_c == 1){continue;}
         std::string checkpoint = cmd[1];
         const int len = len_c;
         int input[len],flag = 0;
