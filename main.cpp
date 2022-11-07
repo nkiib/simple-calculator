@@ -30,28 +30,28 @@ void launch_mode(){
         std::vector<std::string> cmd;
         cmd.push_back("null");
         std::cout << ">>> ";
-            std::string in,s;
-            std::getline(std::cin,in);
-            std::stringstream cmdin{in};
-            while(std::getline(cmdin,s,' ')){
-                cmd.push_back(s);
-            }
-            if(cmd.empty()){continue;}
+        std::string in,s;
+        std::getline(std::cin,in);
+        std::stringstream cmdin{in};
+        while(std::getline(cmdin,s,' ')){
+            cmd.push_back(s);
+        }
+        if(cmd.empty()){continue;}
+        if(cmd[1] == "quit" || cmd[1] == "exit"){
+            std::cout << "Hava a nice day!" << std::endl;
+            break;
+        }
+        int len_c = cmd.size();
+        if(len_c == 2){continue;}
+        std::string checkpoint = cmd[1];
+        const int len = len_c;
+        int input[len],flag = 0;
+        double d_input[len];
+        convert_vect(d_input,cmd,len,flag);
+        if(flag == 1){continue;}
 
-            if(cmd[1] == "quit" || cmd[1] == "exit"){
-                std::cout << "Hava a nice day!" << std::endl;
-                break;
-            }
-            int len_c = cmd.size();
-            std::string checkpoint = cmd[1];
-            const int len = len_c;
-            int input[len],flag = 0;
-            double d_input[len];
-            convert_vect(d_input,cmd,len,flag);
-            if(flag == 1){continue;}
-
-            convert(input,d_input,len);
-            run(input,d_input,len,checkpoint);
+        convert(input,d_input,len);
+        run(input,d_input,len,checkpoint);
     }
 }
 
