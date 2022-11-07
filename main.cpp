@@ -25,7 +25,7 @@ void convert_vect(double d_input[],std::vector<std::string> str,int len,int& fla
 }
 
 void launch_mode(){
-    std::cout << "Hello.I'm Simple-Calculator.v1.0 Alpha-1." << std::endl << "Copyright(c)2022 Team Tlooks." << std::endl;
+    std::cout << "Hello.I'm Simple-Calculator.v1.0.1" << std::endl << "Copyright(c)2022 Team Tlooks." << std::endl;
     for(;;){
         std::vector<std::string> cmd;
         cmd.push_back("null");
@@ -39,7 +39,7 @@ void launch_mode(){
             if(cmd.empty()){continue;}
 
             if(cmd[1] == "quit" || cmd[1] == "exit"){
-                std::cout << "Bye" << std::endl;
+                std::cout << "Hava a nice day!" << std::endl;
                 break;
             }
             int len_c = cmd.size();

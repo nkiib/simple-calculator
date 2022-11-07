@@ -12,11 +12,26 @@ Tlooks Simple Calculatorはとても簡単な計算機ですが、通常の計�
 * <code>-r , reduction , --reduction</code>:入力された分数（１つ目の引数を分子、２つ目の引数を分母と扱います）を約分します。
 * <code>-a , average , --average</code>:引数の平均を計算します。
 * <code>-p , pow , --pow</code>:引数を累乗します。
-
-## 実装されているが機能しない機能
-
 * <code>-m , multiple</code>:引数の最小公倍数を計算します。
+
+# 今後のアップデートで追加されるかもしれない機能
+
+* <code>-l , log</code>:対数を計算します。
 
 # 既知の問題
 
-* 引数に数字以外を入力するとクラッシュする
+現在はなし
+
+# インストール方法
+
+## Mac/Linux/BSD
+
+ダウンロードしたソースコードでmakeコマンド実行
+
+## Windows
+
+ダウンロードしたアーカイブを解答して<code>main.cpp</code>があるディレクトリで
+
+<code>g++ -o tlooks-simple-calc main.cpp -std=c++17 --exec-charset=cp932 --input-charset=utf-8</code>
+
+を実行する。するとtlooks-simple-calc.exeが生成されるのでそれを使う。
