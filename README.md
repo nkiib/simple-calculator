@@ -36,6 +36,4 @@ Tloosk Simple Calculatorは必要な要件として、G++またはClang++をコ�
 
 ダウンロードしたアーカイブを解答して<code>main.cpp</code>があるディレクトリで
 
-<code>g++ -o tlooks-simple-calc main.cpp -std=c++17 --exec-charset=cp932 --input-charset=utf-8</code>
-
-を実行する。するとtlooks-simple-calc.exeが生成されるのでそれを使う。
+<code>win_install.bat</code>を実行する。
