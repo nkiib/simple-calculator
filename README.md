@@ -22,6 +22,10 @@ Tlooks Simple Calculatorはとても簡単な計算機ですが、通常の計�
 
 現在はなし
 
+# 必要要件
+
+Tloosk Simple Calculatorは必要な要件として、G++またはClang++をコンパイラとして要求する。Visual C++ではビルドできない。
+
 # インストール方法
 
 ## Mac/Linux/BSD
