@@ -1,13 +1,5 @@
 /.DS_Store
 /.vscode
 /build
-<<<<<<< HEAD
 *.exe
-=======
-*.exe
-*.exec
-*.app
-*.deb
-*.ipa
-*.apk
->>>>>>> eb914a820592d4b48774903531e077119c61649f
+test

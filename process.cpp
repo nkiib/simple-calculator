@@ -94,7 +94,11 @@ void pow_in(int a,int b,int argc){
         std::cout << "pow:Two arguments are required. " << std::endl;
         return;
     }
-    std::cout << "ans:"  << pow(a,b) << std::endl;
+    long long sum = a;
+    for(int i = 0;i < b-1;i++){
+        sum *= a;
+    }
+    std::cout << "ans:"  << sum << std::endl;
 }
 
 void log_in(int a,int b){
