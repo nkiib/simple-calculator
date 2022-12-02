@@ -3,6 +3,7 @@
 #include<string>
 #include<numeric>
 #include<cmath>
+#include<iomanip>
 
 int divisor(int input[],int argc,int flag = 0){
     
@@ -94,11 +95,15 @@ void pow_in(int a,int b,int argc){
         std::cout << "pow:Two arguments are required. " << std::endl;
         return;
     }
-    long long sum = a;
-    for(int i = 0;i < b-1;i++){
-        sum *= a;
+    std::cout << "ans:" << std::fixed << pow(a,b) << std::endl;
+}
+
+void upper(double a,double b,int argc){
+    if(argc <= 2){
+        std::cout << "pow:Two arguments are required. " << std::endl;
+        return;
     }
-    std::cout << "ans:"  << sum << std::endl;
+    std::cout << "ans:" << b/a << std::endl;
 }
 
 void log_in(int a,int b){
