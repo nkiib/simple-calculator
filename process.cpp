@@ -4,6 +4,7 @@
 #include<numeric>
 #include<cmath>
 #include<iomanip>
+#include<map>
 
 int divisor(int input[],int argc,int flag = 0){
     
@@ -108,4 +109,24 @@ void upper(double a,double b,int argc){
 
 void log_in(int a,int b){
     std::cout << "Sorry.This feature is currently under consideration for implementation." << std::endl;
+}
+
+void timeset(int a,std::string zone){
+    if(a < 0 || 24 < a){
+        std::cout << "Syntax Error:Time must be specified in 24-hour notation, 0~24." << std::endl;
+        return;
+    }
+    typedef std::map<std::string, int> funcs_type;
+
+    funcs_type funcs;
+    funcs.insert(std::make_pair("abc", 1));
+    funcs.insert(std::make_pair("xyz", 2));
+
+    std::string str;
+
+    funcs_type::iterator it = funcs.find(str);
+    if(it != funcs.end()){
+        it -> second();
+    } else
+        std::cout << "not found" << std::endl;
 }
