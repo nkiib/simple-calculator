@@ -34,6 +34,6 @@ Tloosk Simple Calculatorは必要な要件として、G++またはClang++をコ�
 
 ## Windows
 
-ダウンロードしたアーカイブを解答して<code>main.cpp</code>があるディレクトリで
+ダウンロードしたアーカイブを解凍・展開して<code>main.cpp</code>があるディレクトリで
 
 <code>win_install.bat</code>を実行する。
