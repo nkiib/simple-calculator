@@ -3,3 +3,4 @@
 /build
 *.exe
 test
+test.cpp
