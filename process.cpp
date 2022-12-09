@@ -112,6 +112,4 @@ void log_in(int a,int b){
     std::cout << "Sorry.This feature is currently under consideration for implementation." << std::endl;
 }
 
-void timeset(int a,int now,std::string before,std::string after){
     
-}
