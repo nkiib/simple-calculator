@@ -1,6 +1,5 @@
 #include<string>
 #include<cmath>
-#include<iostream>
 using namespace std;
 
 double time_sup(std::string zone){
@@ -23,6 +22,3 @@ std::string time(std::string a_zone,std::string b_zone,int now_h = 0,int now_m =
     }
 }
 
-int main(){
-    cout << time("TYO","SYD",8,30) << endl;
-}
