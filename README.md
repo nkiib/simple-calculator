@@ -13,6 +13,7 @@ Tlooks Simple Calculatorはとても簡単な計算機ですが、通常の計�
 * <code>-a , average , --average</code>:引数の平均を計算します。
 * <code>-p , pow , --pow</code>:引数を累乗します。
 * <code>-m , multiple</code>:引数の最小公倍数を計算します。
+* <code>-u , up</code>:上昇率を計算します。
 
 # 今後のアップデートで追加されるかもしれない機能
 
