@@ -38,7 +38,7 @@ double time_sup(std::string zone){
             time = stod(zone);
         }
         catch(std::invalid_argument){
-            return 1.1;
+            return 25;
         }
         time = std::stod(zone);
     }
@@ -47,16 +47,48 @@ double time_sup(std::string zone){
     return time;
 }
 
-std::string time(std::string a_zone,std::string b_zone,int now_h = 0,int now_m = 0){
+std::string conv_time(std::string a_zone,std::string b_zone,int now_h = 0,int now_m = 0){
     double dif_h_a = time_sup(a_zone);
     double dif_h_b = time_sup(b_zone);
+    if(dif_h_a == 25 || dif_h_b == 25){
+        std::string err = "Error:no such timezone:";
+        if(dif_h_a == 25){err += a_zone;}
+        if(dif_h_b == 25){err += b_zone;}
+        return err;
+    }
     double a;
+    std::string day = "今日の";
+    int hour = 0;
+    int minuites = 0;
     if(dif_h_a < 0.0 && dif_h_b < 0.0){
         a = abs(dif_h_a) - abs(dif_h_b);
     } else if(dif_h_a > 0.0 && dif_h_b > 0.0){
-        a = (abs(dif_h_a) - abs(dif_h_b)) * -1;
+        a = (abs(dif_h_a) - abs(dif_h_b));
     } else {
-        a = abs(dif_h_a) + abs(dif_h_b);
+        a = abs(dif_h_a) - abs(dif_h_b);
     }
+    hour = now_h - a;
+
+    if(hour < 0){
+        hour += 24;
+        day = "昨日の";
+    }
+    else if(24 < a){
+        hour -= 24;
+        day = "明日の";
+    }
+
+    int temp = a/0.5;
+
+    if(temp % 2 == 1){
+        minuites = 30;
+    }
+    std::string ans;
+    ans = day + std::to_string(hour) + "時" + to_string(minuites) + "分";
+    return ans;
 }
 
+int main(){
+    std::cout << conv_time("JST", "UTC" , 0 , 0) << std::endl;
+
+}
